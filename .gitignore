@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+*.sqlite3
+
+# Virtualenv
+venv/
+ENV/
+env/
+.venv/
+
+# IDEs e editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos temporários
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# Vue/Node
+node_modules/
+dist/
+*.log
+
+# Postman
+*.postman_collection.json
+
+# Variáveis de ambiente reais
+.env
+.env.*
+!.env.example
+
