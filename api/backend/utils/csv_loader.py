@@ -1,4 +1,4 @@
-
+# server/utils/csv_loader.py
 import pandas as pd
 import os
 
@@ -9,8 +9,8 @@ def load_csv_data():
     
     try:
         data = pd.read_csv(csv_path, sep=';', engine='python', dtype=str)
-        print("CSV carregado com sucesso.")
-        print("Total de registros:", len(data))
+        data = data.fillna('')
+        print("CSV carregado com sucesso. Total de registros:", len(data))
         return data
     except Exception as e:
         print(f"Erro ao carregar o CSV: {e}")
