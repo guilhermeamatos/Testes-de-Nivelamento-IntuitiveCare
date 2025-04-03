@@ -7,7 +7,10 @@ from utils import download_file, create_zip
 
 def main():
     logging.basicConfig(level=logging.INFO)
-    
+
+    EXTENSAO_ARQUIVO = "pdf" 
+    FILTROS_NOME = ["anexo_i", "anexo_ii"]  
+
     client = WebClient(timeout=TIMEOUT)
     html_content = client.fetch_html(URL_BASE)
     if not html_content:
@@ -15,14 +18,14 @@ def main():
         return
 
     scraper = Scraper(html_content)
-    all_pdf_links = scraper.extract_all_pdf_links()
-    logging.info("Links PDF encontrados: %s", all_pdf_links)
-    
-    target_links = scraper.extract_pdf_links_by_names(["anexo_i", "anexo_ii"])
+    all_links = scraper.extract_all_links_by_extension(EXTENSAO_ARQUIVO)
+    logging.info("Links .%s encontrados: %s", EXTENSAO_ARQUIVO, all_links)
+
+    target_links = scraper.extract_links_by_names(FILTROS_NOME, EXTENSAO_ARQUIVO)
     logging.info("Links filtrados: %s", target_links)
 
     if not target_links:
-        logging.error("Nenhum link dos Anexos I e II encontrado.")
+        logging.error("Nenhum link correspondente aos filtros foi encontrado.")
         return
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
