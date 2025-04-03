@@ -197,5 +197,13 @@ npm run serve
 Esses comandos instalarão as dependências do projeto Vue.js e iniciarão o servidor de desenvolvimento para o frontend.
 Após a execução, acesse a URL exibida no terminal para visualizar a aplicação em funcionamento.
 
+### Testando a API com Postman
+
+Você pode testar nossa API utilizando a Postman Collection disponível no link abaixo:
+
+[API IntuitiveCare](https://yetrh3.postman.co/workspace/yetrh-Workspace~4b370f49-ad4c-49d8-9850-0ef50ca2a2c4/collection/23359082-bb27e278-df54-4aee-8805-bcf907d3af1e?action=share&creator=23359082
+)
+
+
 
 
