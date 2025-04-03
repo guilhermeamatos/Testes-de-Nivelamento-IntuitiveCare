@@ -39,3 +39,12 @@ dist/
 .env.*
 !.env.example
 
+#dados
+*.csv
+*.pdf
+*.zip
+*.tar
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+
