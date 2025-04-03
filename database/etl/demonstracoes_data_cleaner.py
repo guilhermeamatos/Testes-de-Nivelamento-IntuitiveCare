@@ -54,6 +54,6 @@ def process_selected_files(input_dir, operadora_file, files_to_process, columns_
 
 columns_to_replace_comma = ['VL_SALDO_INICIAL', 'VL_SALDO_FINAL']
 
-operadora_file = os.path.join(input_dir, 'operadora.csv')
+operadora_file = os.path.join(input_dir, 'Relatorio_cadop.csv')
 
 process_selected_files(input_dir, operadora_file, files_to_process, columns_to_replace_comma)
