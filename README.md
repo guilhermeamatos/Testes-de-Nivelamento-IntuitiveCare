@@ -7,8 +7,7 @@ Este repositório contém a solução para os testes técnicos propostos na etap
 ## 📁 Estrutura do Projeto
 
 Abaixo está a estrutura de pastas e arquivos do repositório, organizada por áreas de conhecimento conforme solicitado no teste.
-
-guilherme@Guilherme:/mnt/c/Users/guilh/Desktop/Concorrente/Testes-de-Nivelamento-IntuitiveCare$ tree
+```
 .
 ├── README.md
 ├── api
@@ -87,6 +86,7 @@ guilherme@Guilherme:/mnt/c/Users/guilh/Desktop/Concorrente/Testes-de-Nivelamento
     │   └── test_web_client.py
     ├── utils.py
     └── web_client.py
+```
 
 __
 ## ⚙️ Requisitos
