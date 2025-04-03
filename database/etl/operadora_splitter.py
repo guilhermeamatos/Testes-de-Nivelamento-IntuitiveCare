@@ -29,7 +29,7 @@ def save_dataframe(df: pd.DataFrame, file_path: str):
     print(f"Arquivo salvo em: {file_path}")
 
 def main():
-    base_dir = os.path.join("..", "data")
+    base_dir = os.path.join("database", "data")
     input_file = os.path.join(base_dir, "Relatorio_cadop.csv")
     operadora_file = os.path.join(base_dir, "operadora.csv")
     endereco_file = os.path.join(base_dir, "endereco.csv")

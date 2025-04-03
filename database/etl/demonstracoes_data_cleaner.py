@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 
-input_dir = 'C:/Users/guilh/Desktop/Testes-de-Nivelamento-IntuitiveCare/database/data/'
+input_dir = 'database/data'
 
 files_to_process = [
     '1T2023.csv', '1T2024.csv', '2t2023.csv', '2T2024.csv',
