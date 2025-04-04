@@ -1,4 +1,4 @@
-# 🧪 Desafio de Nivelamento - IntuitiveCare
+# 🧪Testes de Nivelamento - IntuitiveCare
 
 Este repositório contém a solução para os testes técnicos propostos na etapa de nivelamento do processo seletivo da **IntuitiveCare**. O projeto foi desenvolvido com foco em clareza, organização, boas práticas de programação e facilidade de avaliação.
 
@@ -76,7 +76,7 @@ __
 
 - Python 3.8+
 - Node.js (para o frontend Vue)
-- MySQL ou PostgreSQL (para testes de banco)
+- PostgreSQL (para testes de banco)
 - Postman (para testes de API)
 
 ---
