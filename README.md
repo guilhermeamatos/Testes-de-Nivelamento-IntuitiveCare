@@ -14,7 +14,6 @@ Abaixo está a estrutura de diretorios e arquivos do repositório, organizada po
 │   ├── backend
 │   │   ├── app.py
 │   │   ├── config.py
-│   │   ├── requirements.txt
 │   │   ├── routes
 │   │   │   └── search.py
 │   │   └── utils
@@ -37,11 +36,7 @@ Abaixo está a estrutura de diretorios e arquivos do repositório, organizada po
 │       │   └── main.js
 │       └── vue.config.js
 ├── data_transform
-│   ├── Teste_Guilherme.zip
 │   ├── csv_transformer.py
-│   ├── data
-│   │   └── output
-│   │       └── rol_procedimentos.csv
 │   ├── main.py
 │   ├── pdf_extractor.py
 │   └── tests
@@ -51,33 +46,21 @@ Abaixo está a estrutura de diretorios e arquivos do repositório, organizada po
 │   ├── analytics
 │   │   ├── ano.sql
 │   │   └── trimestre.sql
-│   ├── data
-│   │   ├── 1T2023_validos.csv
-│   │   ├── 1T2024_validos.csv
-│   │   ├── 2T2024_validos.csv
-│   │   ├── 2t2023_validos.csv
-│   │   ├── 3T2023_validos.csv
-│   │   ├── 3T2024_validos.csv
-│   │   ├── 4T2023_validos.csv
-│   │   ├── 4T2024_validos.csv
-│   │   ├── Relatorio_cadop.csv
-│   │   ├── contato.csv
-│   │   ├── endereco.csv
-│   │   └── operadora.csv
 │   ├── ddl
 │   │   └── create_tables.sql
 │   ├── dml
 │   │   └── load_data.sql
-│   └── etl
-│       ├── demonstracoes_data_cleaner.py
-│       └── operadora_splitter.py
+│   ├── etl
+│   │   ├── demonstracoes_data_cleaner.py
+│   │   └── operadora_splitter.py
+│   └── scraper
+│       ├── __init__.py
+│       └── scraper_data.py
 ├── encodin.py
+├── requirements.txt
 └── web_scraping
-    ├── anexos.zip
+    ├── __init__.py
     ├── config.py
-    ├── downloaded_pdfs
-    │   ├── Anexo_II_DUT_2021_RN_465.2021_RN628.2025_RN629.2025.pdf
-    │   └── Anexo_I_Rol_2021RN_465.2021_RN627L.2024.pdf
     ├── main.py
     ├── scraper.py
     ├── tests
@@ -203,6 +186,42 @@ Você pode testar nossa API utilizando a Postman Collection disponível no link 
 
 [API IntuitiveCare](https://yetrh3.postman.co/workspace/yetrh-Workspace~4b370f49-ad4c-49d8-9850-0ef50ca2a2c4/collection/23359082-bb27e278-df54-4aee-8805-bcf907d3af1e?action=share&creator=23359082
 )
+
+# Deploy na AWS
+
+Foi realizado o deploy de uma aplicação **Python** (back-end) e **Vue.js** (front-end) na AWS, disponibilizando a funcionalidade de **busca textual** pelas operadoras.
+
+## Endereço de Acesso
+
+- **IP Público**: [http://3.133.135.191/](http://3.133.135.191/)
+
+A aplicação está acessível neste endereço, onde é possível realizar a busca e visualizar os resultados retornados pelo back-end.
+
+---
+
+### Observações Importantes
+
+1. **Arquitetura**:
+   - **Front-end (Vue.js)**: Responsável pela interface da aplicação.
+   - **Back-end (Python)**: Gera os resultados da busca textual pelas operadoras.
+
+2. **Nginx**: Configurado como servidor web e proxy reverso para encaminhar as requisições ao back-end.
+
+## Testes de Web Scraping e Transformação de Dados
+
+Foram implementados casos de teste para as etapas de **Web Scraping** e **Transformação de Dados**. Para executar os testes, basta seguir as instruções abaixo:
+
+### 1. Web Scraping
+
+```bash
+cd .\web_scraping\
+python -m unittest discover
+```
+### 1. Transformação de Dados
+```bash
+cd .\data_transform
+python -m unittest discover
+```
 
 
 
