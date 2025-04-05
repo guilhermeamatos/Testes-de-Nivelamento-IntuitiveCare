@@ -222,6 +222,16 @@ python -m unittest discover
 cd .\data_transform
 python -m unittest discover
 ```
+# Experimento de Performance
+
+Foi realizado um experimento para testar a efetividade de uma solução utilizando paralelismo para melhorar a performance de execução do script `demonstracoes_data_cleaner.py`. Foi implementada uma versão com 4 threads disponíveis no arquivo `demonstracoes_data_cleaner_multi_thread.py`.
+
+**Resultados:**
+
+- **Média Versão Paralela:** 1:32 (92 segundos)
+- **Média Versão Sequencial:** 1:51 (111 segundos)
+- **Melhoria de Performance:** Aproximadamente 17%
+
 
 
 
